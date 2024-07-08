@@ -1,0 +1,44 @@
+{
+  "studentList": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.doe@gmail.com",
+      "title": "Software engineer",
+      "department": "IT department 00",
+      "position": "Senior"
+    },
+    {
+      "id": 2,
+      "name": "Alex Ray",
+      "email": "alex.ray@gmail.com",
+      "title": "Consultant",
+      "department": "Finance",
+      "position": "Junior"
+    },
+    {
+      "id": 3,
+      "name": "Kate Hunington",
+      "email": "kate.hunington@gmail.com",
+      "title": "Designer",
+      "department": "UI/UX",
+      "position": "Senior"
+    },
+    {
+      "id": 4,
+      "name": "tomor seoo",
+      "email": "tomor.seoo@gmail.com",
+      "title": "Developer",
+      "department": "IT department",
+      "position": "Junior"
+    },
+    {
+      "name": "Mohd Aamir",
+      "email": "mohdaamir39927@gmail.com",
+      "title": "Software engineer",
+      "department": "IT department",
+      "position": "Senior",
+      "id": 5
+    }
+  ]
+}

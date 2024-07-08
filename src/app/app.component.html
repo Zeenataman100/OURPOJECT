@@ -80,6 +80,117 @@
 </div>
 
 
+<div class="container border p-3">
+  <h1>FILL DETAILS</h1>
+  <form class="row g-3" [formGroup]="myForm" (ngSubmit)="OnSubmit()">
+    <div class="col-md-6">
+      <label for="inputName" class="form-label">Name</label>
+      <input type="text" class="form-control" id="inputName" formControlName="formname" placeholder="eg: zeenat aman">
+    </div>
+
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" formControlName="formemail" placeholder="amanzeenat207@gmail.com">
+    </div>
+    
+    <div class="col-12">
+      <label for="inputTitle" class="form-label">Title</label>
+      <input type="text" class="form-control" id="inputTitle" formControlName="formtitle" placeholder="eg: Finance">
+    </div>
+  
+    <div class="col-6">
+      <label for="inputDepartment" class="form-label">Department</label>
+      <input type="text" class="form-control" id="inputDepartment" formControlName="formdepartment" placeholder="eg:IT">
+    </div>
+    <div class="col-md-6">
+      <label for="inputPosition" class="form-label">Position</label>
+      <input type="text" class="form-control" id="inputPosition" formControlName="formposition" placeholder="eg:senior">
+    </div>
+  
+  
+  
+    <!-- <div class="col-md-4">
+      <label for="inputState" class="form-label">State</label>
+      <select id="inputState" class="form-select">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+  
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+  
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">Remember me</label>
+      </div>
+    </div> -->
+  
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    <div class="col-12">
+      <button type="button" class="btn btn-primary" (click)="OnUpdate()">Update</button>
+    </div>
+  </form>
+  
+</div>
+
+<div class="col-md-6 container my-3" >
+  <label for="inputName" class="form-label">Search details</label>
+  <input type="text" class="form-control" placeholder="enter key" name="search" [(ngModel)]="searchText" autocomplete="off">
+</div>
+<table class="table align-middle mb-0 bg-white container border my-3 p-3">
+  <thead class="bg-light">
+    <tr>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Status</th>
+      <th>Position</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let x of dataStore | filter : searchText">
+      <td>
+        <div class="d-flex align-items-center">
+          <img
+              src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+              alt=""
+              style="width: 45px; height: 45px"
+              class="rounded-circle"
+              />
+          <div class="ms-3">
+            <p class="fw-bold mb-1">{{x.name}}</p>
+            <p class="text-muted mb-0">{{x.email}}</p>
+          </div>
+        </div>
+      </td>
+      <td>
+        <p class="fw-normal mb-1">{{x.title}}</p>
+        <p class="text-muted mb-0">{{x.department}}</p>
+      </td>
+      <td>
+        <span>Active</span>
+      </td>
+      <td>{{x.position}}</td>
+      <td>
+        <button type="button" class="btn btn-link btn-sm btn-rounded" (click)="OnEdit(x)">
+          Edit
+        </button>
+  <button type="button" class="btn btn-link btn-sm btn-rounded" (click)="OnDelete(x.id)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <div class="container">
+  
 <table class="border container" *ngIf="on">
   <tr class="my-3" *ngFor="let sdata of studentList">
     <td class="p-3">{{sdata.name}}</td>
@@ -99,3 +210,5 @@
   <li [ngStyle]="{'color': 'red'}">{{sdata.name}}</li>
   <li>{{sdata.age}}</li>
 </ul>
+</div>
+ -->
