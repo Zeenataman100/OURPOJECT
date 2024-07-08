@@ -85,26 +85,51 @@
   <form class="row g-3" [formGroup]="myForm" (ngSubmit)="OnSubmit()">
     <div class="col-md-6">
       <label for="inputName" class="form-label">Name</label>
-      <input type="text" class="form-control" id="inputName" formControlName="formname" placeholder="eg: zeenat aman">
+      <input type="text" class="form-control" id="inputName" formControlName="formname" placeholder="eg: zeenat aman" >
+     <div *ngIf="myForm.get('formname')?.invalid && (myForm.get('formname')?.dirty || myForm.get('formname')?.touched)">
+      <div class="text-danger" *ngIf="myForm.get('formname')?.errors" >
+        Feild is required
+      </div>
+     </div>
     </div>
 
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Email</label>
       <input type="email" class="form-control" id="inputEmail4" formControlName="formemail" placeholder="amanzeenat207@gmail.com">
+      <div *ngIf="myForm.get('formemail')?.invalid && (myForm.get('formemail')?.dirty || myForm.get('formemail')?.touched)">
+        <div class="text-danger" *ngIf="myForm.get('formemail')?.errors">
+          Feild is required
+        </div>
+       </div>
     </div>
     
     <div class="col-12">
       <label for="inputTitle" class="form-label">Title</label>
       <input type="text" class="form-control" id="inputTitle" formControlName="formtitle" placeholder="eg: Finance">
+      <div *ngIf="myForm.get('formtitle')?.invalid && (myForm.get('formtitle')?.dirty || myForm.get('formtitle')?.touched)">
+        <div class="text-danger" *ngIf="myForm.get('formtitle')?.errors">
+          Feild is required
+        </div>
+       </div>
     </div>
   
     <div class="col-6">
       <label for="inputDepartment" class="form-label">Department</label>
       <input type="text" class="form-control" id="inputDepartment" formControlName="formdepartment" placeholder="eg:IT">
+      <div *ngIf="myForm.get('formdepartment')?.invalid && (myForm.get('formdepartment')?.dirty || myForm.get('formdepartment')?.touched)">
+        <div class="text-danger" *ngIf="myForm.get('formdepartment')?.errors">
+          Feild is required
+        </div>
+       </div>
     </div>
     <div class="col-md-6">
       <label for="inputPosition" class="form-label">Position</label>
       <input type="text" class="form-control" id="inputPosition" formControlName="formposition" placeholder="eg:senior">
+      <div *ngIf="myForm.get('formposition')?.invalid && (myForm.get('formposition')?.dirty || myForm.get('formposition')?.touched)">
+        <div class="text-danger" *ngIf="myForm.get('formposition')?.errors">
+          Feild is required
+        </div>
+       </div>
     </div>
   
   
@@ -189,7 +214,7 @@
   </tbody>
 </table>
 
-<!-- <div class="container">
+<div class="container">
   
 <table class="border container" *ngIf="on">
   <tr class="my-3" *ngFor="let sdata of studentList">
@@ -211,4 +236,4 @@
   <li>{{sdata.age}}</li>
 </ul>
 </div>
- -->
+

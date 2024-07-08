@@ -128,4 +128,8 @@ OnUpdate(){
     this.ngOnInit();
   })
 }
+
+get formControls(){
+  return this.myForm.controls
+}
 }

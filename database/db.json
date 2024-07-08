@@ -5,7 +5,7 @@
       "name": "John Doe",
       "email": "john.doe@gmail.com",
       "title": "Software engineer",
-      "department": "IT department 00",
+      "department": "IT ",
       "position": "Senior"
     },
     {
@@ -39,6 +39,14 @@
       "department": "IT department",
       "position": "Senior",
       "id": 5
+    },
+    {
+      "id": 6,
+      "name": "Zeenat Aman",
+      "email": "amanzeenat207@gmail.com",
+      "title": "Angular Developer",
+      "department": "IT",
+      "position": "Senior"
     }
   ]
 }
