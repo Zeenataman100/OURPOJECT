@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Comp3Component } from './comp3.component';
+import { Comp4Component } from './comp4.component';
 
-const routes: Routes = [{ path: 'formarray', component: Comp3Component }];
+const routes: Routes = [{ path: 'comp4', component: Comp4Component }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class Comp3RoutingModule { }
+export class Comp4RoutingModule { }

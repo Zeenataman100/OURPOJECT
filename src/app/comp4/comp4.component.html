@@ -1,0 +1,22 @@
+<p>comp4 works!</p>
+<form [formGroup]="subjectsForm">
+    <div formArrayName="subjects">
+        <div *ngFor="let s of subjects.controls;  let i=index">
+            <div [formGroupName]="i">
+                {{i}}
+                skill name :
+                <input type="text" formControlName="skill">
+                exp:
+                <input type="text" formControlName="exp">
+
+                <!-- <button (click)="removeSubject(i)">Remove</button> -->
+            </div>
+        </div>
+    </div>
+
+</form>
+
+ 
+<p>
+    <button type="button" (click)="addSubject()">Add</button>
+  </p>
